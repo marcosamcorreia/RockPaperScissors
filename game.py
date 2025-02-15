@@ -1,6 +1,7 @@
-from random import randint
-import os
 def game():
+    from random import randint
+    import os
+
     m=["rock","paper", "scissor"]
     result=["Draw", "You won", "You lose"]
 
@@ -30,5 +31,14 @@ def game():
     else:
         print("That's not a valid play. Check your spelling!")
         return game()
-game()
-os.system("pause")
+
+
+    again= input("Do you want play again?  Y/N ")
+
+    if again.lower() == "y" or again.lower() == "yes":
+        print("If you want to play let's play!")
+        game()
+    elif again.lower() == "n" or again.lower() == "no":
+        print("See you later. Bye!")
+
+    os.system("pause")
